@@ -34,10 +34,10 @@ jobs:
       run: npm run build
 
     - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: a134f5c96e90e0c3fec81a95dc00725e
-          projectName: teste-cloudflare
-          directory: dist
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      uses: cloudflare/pages-action@1
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: a134f5c96e90e0c3fec81a95dc00725e
+        projectName: teste-cloudflare
+        directory: dist
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
