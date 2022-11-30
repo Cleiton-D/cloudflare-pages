@@ -6,6 +6,8 @@ on:
 
 jobs:
   build:
+    env:
+      TF_VAR_cloudflare_api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -32,6 +34,12 @@ jobs:
 
     - name: Build
       run: npm run build
+
+    - name: Setup terraform
+      uses: hashicorp/setup-terraform@v2
+
+    - run: terraform init
+    - run: terraform apply -auto-approve
 
     - name: Publish to Cloudflare Pages
       uses: cloudflare/pages-action@1
