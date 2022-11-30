@@ -24,7 +24,7 @@ resource "cloudflare_pages_project" "basic_project" {
 }
 
 resource "cloudflare_pages_domain" "cleitonkiper_domain" {
-  account_id   = "f037e56e89293a057740de681ac9abbe"
+  account_id   = "a134f5c96e90e0c3fec81a95dc00725e"
   project_name = "terraform-teste"
   domain       = "terraform.cleitonkiper.com.br"
 }
