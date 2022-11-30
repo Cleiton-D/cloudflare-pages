@@ -37,9 +37,14 @@ jobs:
 
     - name: Setup terraform
       uses: hashicorp/setup-terraform@v2
+      run: terraform init
 
-    - run: terraform init
-    - run: terraform apply -auto-approve
+    - name: Import existent
+      continue-on-error: true
+      run: terraform import cloudflare_pages_project.basic_project a134f5c96e90e0c3fec81a95dc00725e/terraform-teste
+
+    - name: terraform apply
+      run: terraform apply -auto-approve
 
     - name: Publish to Cloudflare Pages
       uses: cloudflare/pages-action@1
