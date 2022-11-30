@@ -46,6 +46,6 @@ jobs:
       with:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         accountId: a134f5c96e90e0c3fec81a95dc00725e
-        projectName: teste-cloudflare
+        projectName: terraform-teste
         directory: dist
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
