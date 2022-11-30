@@ -23,8 +23,8 @@ resource "cloudflare_pages_project" "basic_project" {
   production_branch = "main"
 }
 
-resource "cloudflare_pages_domain" "cleitonkiper_domain" {
-  account_id   = "a134f5c96e90e0c3fec81a95dc00725e"
-  project_name = "terraform-teste"
-  domain       = "terraform.cleitonkiper.com.br"
-}
+# resource "cloudflare_pages_domain" "cleitonkiper_domain" {
+#   account_id   = "a134f5c96e90e0c3fec81a95dc00725e"
+#   project_name = "terraform-teste"
+#   domain       = "terraform.cleitonkiper.com.br"
+# }
