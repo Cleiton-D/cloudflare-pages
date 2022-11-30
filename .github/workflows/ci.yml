@@ -43,7 +43,9 @@ jobs:
 
     - name: Import existent
       continue-on-error: true
-      run: terraform import cloudflare_pages_project.basic_project a134f5c96e90e0c3fec81a95dc00725e/terraform-teste
+      run: |
+        terraform import cloudflare_pages_project.basic_project a134f5c96e90e0c3fec81a95dc00725e/terraform-teste
+        terraform import cloudflare_pages_domain.cleitonkiper_domain a134f5c96e90e0c3fec81a95dc00725e/terraform-teste/terraform.cleitonkiper.com.br
 
     - name: terraform apply
       run: terraform apply -auto-approve
