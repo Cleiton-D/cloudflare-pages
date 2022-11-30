@@ -22,3 +22,9 @@ resource "cloudflare_pages_project" "basic_project" {
   name       = "terraform-teste"
   production_branch = "main"
 }
+
+resource "cloudflare_pages_domain" "cleitonkiper_domain" {
+  account_id   = "f037e56e89293a057740de681ac9abbe"
+  project_name = "terraform-teste"
+  domain       = "terraform.cleitonkiper.com.br"
+}
